@@ -1,0 +1,519 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Manomay Tech</title>  
+    <link rel="stylesheet" href="styles.css">  
+<style>body {  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+  
+header {  
+    background-color: #fff;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 20px;  
+}  
+  
+.logo img {  
+    height: 50px;  }
+	
+.navbar {  
+    background-color: #fff;  
+    padding: 10px 20px;  
+}  
+  
+.nav-menu {  
+    list-style: none;  
+    display: flex;  
+    justify-content: flex-start;  
+    margin: 0;  
+    padding: 0;  
+}  
+  
+.nav-item {  
+    position: relative;  
+    margin-right: 20px;  
+}  
+  
+.nav-link {  
+    text-decoration: none;  
+    color: #333;  
+    font-size: 1em;  
+    padding: 10px;  
+    display: inline-block;  
+    transition: color 0.3s;  
+}  
+  
+.nav-link:hover {  
+    color: #0d4b81;  
+}  
+  
+.dropdown-menu {  
+    display: none;  
+    position: absolute;  
+    top: 100%;  
+    left: 0;  
+    background-color: #f9f9f9;  
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+    list-style: none;  
+    padding: 0;  
+    margin: 0;  
+    width: 200px;  
+    z-index: 1000;  
+}  
+  
+.dropdown-menu li {  
+    border-bottom: 1px solid #ddd;  
+}  
+  
+.dropdown-menu li:last-child {  
+    border-bottom: none;  
+}  
+  
+.dropdown-menu li a {  
+    text-decoration: none;  
+    color: #333;  
+    padding: 10px;  
+    display: block;  
+    transition: background-color 0.3s;  
+}  
+  
+.dropdown-menu li a:hover {  
+    background-color: #f1f1f1;  
+}  
+  
+.dropdown:hover .dropdown-menu {  
+    display: block;  
+}  
+.banner {  
+    background-image: url('background-image.jpg');  
+    background-size: cover;  
+    background-position: center;  
+    text-align: center;  
+    color: white;  
+    padding: 100px 20px;  
+}  
+  
+.banner h1 {  
+    font-size: 2.5em;  
+    margin: 0;  
+}  
+  
+.banner h2 {  
+    font-size: 1.5em;  
+    margin: 10px 0;  
+}  
+  
+.banner p {  
+    font-size: 1.2em;  
+}  
+  
+.partners {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    padding: 20px;  
+    background-color: #f4f4f4;  
+}  
+  
+.partners img {  
+    margin: 0 15px;  
+    height: 50px;  
+}  
+
+.services-section {  
+    text-align: center;  
+    padding: 50px 20px;  
+    background-color: #fff;  
+}  
+  
+.services-section h2 {  
+    color: #0d4b81;  
+    font-size: 2em;  
+    margin-bottom: 20px;  
+}  
+  
+.services-container {  
+    display: flex;  
+    justify-content: center;  
+    flex-wrap: wrap;  
+    gap: 20px;  
+}  
+  
+.service-card {  
+    background-color: #fff;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+    padding: 20px;  
+    max-width: 300px;  
+    text-align: center;  
+    text-decoration: none;  
+    color: inherit;  
+    transition: transform 0.3s, box-shadow 0.3s;  
+}  
+  
+.service-card:hover {  
+    transform: translateY(-5px);  
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);  
+}  
+  
+.service-icon img {  
+    width: 50px;  
+    height: 50px;  
+    margin-bottom: 10px;  
+}  
+  
+.service-card h3 {  
+    color: #333;  
+    font-size: 1.5em;  
+    margin-bottom: 10px;  
+}  
+  
+.service-card p {  
+    color: #666;  
+    font-size: 1em;  
+    line-height: 1.5;  
+}  
+
+.newsletter-section {  
+    text-align: center;  
+    padding: 50px 20px;  
+    background-color: #fff;  
+}  
+  
+.newsletter-section h2 {  
+    color: #0d4b81;  
+    font-size: 2em;  
+    margin-bottom: 20px;  
+}  
+  
+.signup-button {  
+    background-color: #0d4b81;  
+    color: white;  
+    border: none;  
+    padding: 10px 20px;  
+    font-size: 1em;  
+    border-radius: 25px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+  
+.signup-button:hover {  
+    background-color: #0b3a66;  
+}  
+  
+.footer {  
+    background-color: #f4f4f4;  
+    padding: 20px 0;  
+}  
+.footer-content {  
+    display: flex;  
+    justify-content: space-around;  
+    flex-wrap: wrap;  
+    max-width: 1200px;  
+    margin: 0 auto;  
+    padding: 20px;  
+}  
+  
+.footer-column {  
+    flex: 1;  
+    min-width: 250px;  
+    margin: 10px;  
+}  
+  
+.footer-column h3 {  
+    color: #0d4b81;  
+    font-size: 1.2em;  
+    margin-bottom: 10px;  
+}  
+  
+.footer-column p,  
+.footer-column a {  
+    color: #333;  
+    font-size: 0.9em;  
+    line-height: 1.5;  
+    margin: 5px 0;  
+    text-decoration: none;  
+}  
+  
+.footer-column a:hover {  
+    text-decoration: underline;  
+}  
+  
+.social-media {  
+    margin-bottom: 15px;  
+}  
+  
+.social-icon {  
+    display: inline-block;  
+    width: 30px;  
+    height: 30px;  
+    background-color: #0d4b81;  
+    color: #fff;  
+    text-align: center;  
+    line-height: 30px;  
+    border-radius: 50%;  
+    margin: 0 5px;  
+    font-size: 1.2em;  
+    transition: background-color 0.3s;  
+}  
+  
+.social-icon:hover {  
+    background-color: #0b3a66;  
+}  
+  
+.footer-links,  
+.offerings {  
+    margin-bottom: 15px;  
+}  
+  
+.footer-bottom {  
+    text-align: center;  
+    background-color: #0d4b81;  
+    color: white;  
+    padding: 10px 0;  
+    font-size: 0.8em;  
+    position: relative;  
+    bottom: 0;  
+    width: 100%;  
+}  
+
+.testimonials-section {  
+    text-align: center;  
+    padding: 50px 20px;  
+}  
+  
+.testimonials-section h2 {  
+    color: #0d4b81;  
+    font-size: 2em;  
+    margin-bottom: 20px;  
+}  
+  
+.carousel {  
+    max-width: 800px;  
+    margin: 0 auto;  
+    overflow: hidden;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  
+}  
+  
+.carousel-item {  
+    display: none;  
+    padding: 20px;  
+    background-color: #fff;  
+    border-radius: 10px;  
+}  
+  
+.carousel-item.active {  
+    display: block;  
+}  
+  
+.testimonial {  
+    text-align: center;  
+}  
+  
+.profile-image {  
+    width: 100px;  
+    height: 100px;  
+    border-radius: 50%;  
+    margin-bottom: 15px;  
+}  
+  
+h3 {  
+    font-size: 1.5em;  
+    margin-bottom: 5px;  
+}  
+  
+.position {  
+    color: #0d4b81;  
+    margin-bottom: 10px;  
+}  
+  
+.linkedin-icon {  
+    display: inline-block;  
+    margin-bottom: 15px;  
+    color: #0d4b81;  
+    text-decoration: none;  
+    font-weight: bold;  
+}  
+  
+.testimonial-text {  
+    font-style: italic;  
+    color: #555;  
+    line-height: 1.6;  
+}  
+.indicator {  
+    width: 10px;  
+    height: 10px;  
+    background-color: #ddd;  
+    border-radius: 50%;  
+    margin: 0 5px;  
+    cursor: pointer;  
+    transition: background-color 0.3s;  
+}  
+  
+.indicator.active {  
+    background-color: #0d4b81;  
+}  
+  
+.carousel-indicators {  
+    display: flex;  
+    justify-content: center;  
+    margin-top: 15px;  
+} 
+ .content {  
+            max-width: 800px;  
+            margin: 50px auto;  
+            padding: 20px;  
+            background-color: #fff;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+        }  
+        .content p {  
+            line-height: 1.6;  
+            color: #444;  
+        }  
+        .content .highlight {  
+            color: #0056b3;  
+            font-weight: bold;  
+        }  
+        .content .email {  
+            text-align: center;  
+            margin-top: 30px;  
+            font-weight: bold;  
+            color: #0056b3;  
+        }  
+        .content .email a {  
+            color: #0056b3;  
+            text-decoration: none;  
+        }  
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function() {  
+    const items = document.querySelectorAll('.carousel-item');  
+    const indicators = document.querySelectorAll('.indicator');  
+    let currentIndex = 0;  
+  
+    function showItem(index) {  
+        items.forEach((item, i) => {  
+            item.classList.remove('active');  
+            indicators[i].classList.remove('active');  
+            if (i === index) {  
+                item.classList.add('active');  
+                indicators[i].classList.add('active');  
+            }  
+        });  
+    }  
+  
+    function nextItem() {  
+        currentIndex = (currentIndex + 1) % items.length;  
+        showItem(currentIndex);  
+    }  
+  
+    function setItem(index) {  
+        currentIndex = index;  
+        showItem(currentIndex);  
+    }  
+  
+    indicators.forEach((indicator, index) => {  
+        indicator.addEventListener('click', () => setItem(index));  
+    });  
+  
+    // Automatically move to the next item every 5 seconds  
+    setInterval(nextItem, 5000);  
+  
+    // Show the first item initially  
+    showItem(currentIndex);  
+});  
+</script>
+</head>  
+<body>  
+    <header>  
+        <div class="logo">  
+            <img src="https://www.manomay.biz/wp-content/uploads/2021/09/cropped-Customized_logo.png" alt="Manomay Logo">  
+        </div>  
+      <nav class="navbar">  
+        <ul class="nav-menu">  
+            <li class="nav-item">  
+                <a href="index.html" class="nav-link">🏠 Home</a>  
+            </li>  
+            <li class="nav-item dropdown">  
+                <a href="#" class="nav-link">☰ Services</a>  
+                <ul class="dropdown-menu">  
+                    <li><a href="#">Consulting Services</a></li>  
+                    <li><a href="#">Data Services</a></li>  
+                    <li><a href="#">Technology Solutions</a></li>  
+                </ul>  
+            </li>  
+            <li class="nav-item">  
+                <a href="careers.html" class="nav-link">👤 Careers</a>  
+            </li>  
+            <li class="nav-item">  
+                <a href="#" class="nav-link">📊 BT Insights</a>  
+            </li>  
+            <li class="nav-item">  
+                <a href="aboutus.html" class="nav-link">ℹ️ About Us</a>  
+            </li>  
+            <li class="nav-item">  
+                <a href="contact.html" class="nav-link">📞 Contact</a>  
+            </li>  
+        </ul>  
+    </nav>    
+    </header>  
+    <main>  
+    
+	 <div class="content">  
+        <p>And that’s our philosophy!</p>  
+        <p>We are the tribe that is <span class="highlight">Humble</span> in approach, <span class="highlight">Aggressive</span> in pursuit and <span class="highlight">Accountable</span> beyond self...Tribe that’s always in pursuit to deliver right and stay relevant – consistently and continuously.</p>  
+        <p>And, finally the Tribe that believes Growth is a Game!</p>  
+        <p>Does this resonate with you?</p>  
+        <p>If you want to be part of entrepreneurial environment, game for unconventional work and are a mix of hunger & humility (skilled by default), there is always this one place for you here.</p>  
+        <div class="email">  
+            Excited to join us? Email us at <a href="mailto:inquisite@manomay.biz">inquisite@manomay.biz</a>  
+        </div>  
+    </div>  
+    <footer class="footer">  
+        <div class="footer-content">  
+            <div class="footer-column">  
+                <h3>Contact</h3>  
+                <p>📞 +91 40-23555820, <br> +1 813 324 6565 (US)</p>  
+                <p>✉️ inquisit@manomay.biz</p>  
+                <p>🕒 Mon - Fri: 10:00am to 7:00pm IST</p>  
+                <p>🏢 Closed on Weekends</p>  
+            </div>  
+  
+            <div class="footer-column">  
+                <div class="social-media">  
+                    <a href="#" class="social-icon">f</a>  
+                    <a href="#" class="social-icon">in</a>  
+                    <a href="#" class="social-icon">t</a>  
+                </div>  
+                <div class="footer-links">  
+                    <a href="#">About us</a> |  
+                    <a href="#">Career</a> |  
+                    <a href="#">BT Insights</a> |  
+                    <a href="#">Contact</a>  
+                </div>  
+                <div class="offerings">  
+                    <h3>Offerings</h3>  
+                    <p>Consulting Services | Data Services | Technology Solutions</p>  
+                </div>  
+            </div>  
+  
+            <div class="footer-column">  
+                <h3>Address</h3>  
+                <p>🏠 8-2-269/w/6, Gurukrupa Vilasam, <br> Sagar Society, Sri Nagar Colony, Banjara Hills, <br> Hyderabad, Telangana, <br> INDIA - 500 034</p>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>Copyright © 2021 Manomay Insurtech Pvt. Ltd. ISO 27001 Certified. All rights reserved.</p>  
+        </div>  
+    </footer>  
+    </main>  
+</body>  
+</html>  
